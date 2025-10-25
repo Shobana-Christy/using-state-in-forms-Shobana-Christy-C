@@ -25,6 +25,7 @@ export default function FormData() {
             <div className="table">{/** table  */}
                 <h1 className="header1">User-Form</h1>
                 <form>
+
                     <div className="row"> {/** row  */}
                         <div className="column">
                             <label>Name:</label>
@@ -33,14 +34,16 @@ export default function FormData() {
                             <input type="text" name="name" value={formData.name} required onChange={handleChange} />
                         </div>
                     </div>
+
                     <div className="row">
                         <div className="column">
-                            <label>
-                                Email:
-                            </label></div>
-
-                        <div className="column"><input type="text" name="email" required value={formData.email} onChange={handleChange} /></div>
+                            <label>Email:</label>
+                        </div>
+                        <div className="column">
+                            <input type="text" name="email" required value={formData.email} onChange={handleChange} />
+                        </div>
                     </div>
+
                     <div className="row">
                         <div className="column">
                             <label>Feedback:</label>
@@ -48,12 +51,13 @@ export default function FormData() {
                         <div className="column">
                             <textarea name="feedback" value={formData.feedback} required maxLength="200" onChange={handleChange} />
                             <p>Count: {formData.feedback.length}</p>
-
                         </div>
                     </div>
+
                     <div className="row submit-btn">
                         <button disabled={isFormEmpty}>Submit</button>
                     </div>
+
                 </form>
                 <div className="preview">
                     <h2>Preview</h2>
@@ -61,6 +65,7 @@ export default function FormData() {
                     <p>Email:{formData.email}</p>
                     <p>Feedback:{formData.feedback}</p>
                 </div>
+
             </div>
         </div>
     )
